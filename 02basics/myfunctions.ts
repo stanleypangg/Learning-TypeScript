@@ -21,4 +21,20 @@ console.log(number);
 getUpper("hello");
 signUpUser('stan', 'stanley@mail.com', 'password123');
 
+const heros = ['thor', 'ironman', 'spiderman'];
+
+heros.map((hero: string) => {
+    return `hero is ${hero}`;
+});
+
+function consoleError(err: string): void {
+    console.log(err);
+}
+
+// Some functions never return a value
+// For example, a function that throws an error or a function that runs an infinite loop
+function handleError(err: string): never {
+    throw new Error(err);
+}
+
 export {};
